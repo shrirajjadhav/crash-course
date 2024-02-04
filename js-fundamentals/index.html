@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 >JS Fundamentals</h1>
+    <p>understanding basics</p>
+
+    <button id="btn">count++</button>
+    <p id="counter">0</p>
+
+    <script>
+        // var firstName=""
+        // var lastName
+
+        let num1,num2
+        const PI=3.14
+
+        // console.log("Hello World")
+        // console.log("PI is "+PI)
+
+        // let heading = document.getElementById('heading')
+        //  heading = document.querySelector('h1')
+        // console.log(heading)
+        // heading.innerText = "JavaScript Fundamentals"
+
+        // const btn = document.querySelector('#btn')
+        // function handleClick (event) {
+        //     event.preventDefault()
+        //     // alert("clicked from handleClick")
+        //     document.write("clicked")
+        // }
+        // btn.addEventListener('click', handleClick)
+
+        const btn = document.querySelector('#btn')
+        const counter = document.querySelector('#counter')
+
+        btn.addEventListener('click', (e)=>{
+            let count = counter.textContent
+            count = parseInt(count)
+            // count+=1
+            count = count + 1
+
+            console.log(count)
+
+            counter.textContent = count
+        })
+        
+
+    </script>
+</body>
+</html>

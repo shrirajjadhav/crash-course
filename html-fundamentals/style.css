@@ -1,0 +1,29 @@
+*,
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: 5rem;
+}
+h1,
+h2,
+h3 {
+  color: blue;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+#username {
+  font-style: italic;
+}
+
+.about-us {
+  color: blueviolet;
+}
+
+table {
+    border: 1px solid black;
+}
+

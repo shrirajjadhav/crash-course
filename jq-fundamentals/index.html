@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    <script src="/jq.js"></script>
+  </head>
+  <body>
+    <h1>jQuery Fundamentals</h1>
+    <p style="color: blue;" id="output">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis, rerum nobis perferendis, temporibus porro fugiat voluptates, vitae non aliquid modi alias. Iusto id voluptate magnam enim cum commodi deserunt.</p>
+
+    <hr>
+
+    <form id="username-form" >
+        <p id="msg"></p>
+        <input type="text" name="username" id="username" placeholder="enter username" />
+        <input type="number" name="mobile-no" id="mobile-no" placeholder="enter mobile no" />
+        <button>submit</button>
+    </form>
+
+    <script>
+      /*
+        Getting and setting content: .text(), .html(), .val()
+Getting and setting attributes:
+ .attr(), .removeAttr(), .addClass(), 
+ .removeClass(), .toggleClass()
+        */
+      $(document).ready(() => {
+        console.log("JQ loaded");
+
+        $('#username-form').submit((e)=>{
+            e.preventDefault()
+            $('#msg').text("")
+            let username = $('#username').val().trim()
+            let mobileNo = $('#mobile-no').val().trim()
+            if(username=="" && mobileNo==""){
+                console.log("fill form")
+                $('#msg').text("Please fill the form")
+            }
+            else if(mobileNo==""){
+                console.log("mobile no empty")
+                $('#msg').text("Please enter a Mobile No.")
+            }
+            else {
+                $('#msg').text("registered successfully")
+            }
+            // console.log(typeof username)
+            // console.log(typeof mobileNo)
+        })
+
+        // $("h1")
+        //   .on("mouseover", (e) => {
+        //     e.preventDefault();
+        //     // console.log("You over h1")
+        //     $("#output").html("<a href='/#'>You over heading</a>");
+        //   })
+        //   .on("mouseout", (e) => {
+        //     e.preventDefault();
+        //     $("#output").text("");
+        //   });
+
+        // $('#output').attr("style", "background: red")
+
+      });
+    </script>
+  </body>
+</html>
